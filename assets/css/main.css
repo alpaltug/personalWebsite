@@ -1550,10 +1550,10 @@
 
 /* Basic */
 
-	body {
-		background: #101418 !important;
-		color: #f8f8f8;
-		font-family: 'Source Sans Pro', Arial, sans-serif;
+	body, html, .unified-theme {
+		background: #fff !important;
+		color: #111 !important;
+		font-family: 'Courier New', Courier, monospace !important;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1660,7 +1660,7 @@
 
 	hr {
 		border: none;
-		border-top: 1px solid #1db954;
+		border-top: 1px solid #1db954 !important;
 		margin: 2em 0;
 	}
 
@@ -2593,11 +2593,10 @@
 			}
 
 		#main > .inner, .box, .work-item, section, article {
-			background: rgba(24, 28, 32, 0.92) !important;
-			color: #f8f8f8;
-			border-radius: 12px;
-			box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
-			border: none;
+			border: none !important;
+			background: #fff !important;
+			color: #111 !important;
+			font-family: 'Courier New', Courier, monospace !important;
 		}
 
 /* Poptrox */
@@ -3137,3 +3136,108 @@
 			}
 
 	}
+
+/* Remove overlays and background images from header and footer */
+#header, #footer {
+    background: #fff !important;
+    color: #111 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+#header .title, #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+    color: #111 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* Flat, old-school nav */
+#header nav ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin: 2em 0 0 0 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+#header nav ul li {
+    padding: 0.2em 0 !important;
+}
+#header nav ul li a {
+    display: inline !important;
+    padding: 0 !important;
+    color: #1db954 !important;
+    background: none !important;
+    border: none !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+#header nav ul li a:hover {
+    color: #21c07a !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Remove border-radius and box-shadow everywhere */
+*, *:before, *:after {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Monospace for all lists, tables, and buttons */
+ul, ol, li, table, th, td, .button, input, select, textarea {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #111 !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Flat, old-school buttons */
+.button, input[type="submit"], input[type="button"] {
+    background: #1db954 !important;
+    color: #fff !important;
+    border: 1px solid #111 !important;
+    border-radius: 0 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    box-shadow: none !important;
+}
+.button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background: #21c07a !important;
+}
+
+/* Table styling for old HTML look */
+table {
+    border: 1px solid #111 !important;
+    border-collapse: collapse !important;
+    background: #fff !important;
+}
+th, td {
+    border: 1px solid #111 !important;
+    padding: 0.5em 1em !important;
+    background: #fff !important;
+    color: #111 !important;
+}
+
+/* Remove modern image overlays */
+.image:before, .image.thumb:after {
+    display: none !important;
+}
+
+/* Remove modern color from strong, b, headings */
+strong, b, h1, h2, h3, h4, h5, h6 {
+    color: #111 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* Make sure all content areas are bordered for retro look */
+#main > .inner, .box, .work-item, section, article {
+    border: none !important;
+    background: #fff !important;
+    color: #111 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* Remove all gradients and background images */
+body, html, #main, #header, #footer, section, article {
+    background-image: none !important;
+    background: #fff !important;
+}
