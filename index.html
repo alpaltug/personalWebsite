@@ -1,53 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Alp Altug - Personal Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
-                <a href="index.html" class="logo">
-                    <span class="symbol"><img src="images/alp_avatar.jpg" alt="Alp Altug" /></span><span class="title">Alp Altug</span>
-                </a>
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+    <head>
+        <title>Alp Altug - Personal Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Basic styles for the particle background and content readability */
+            /* These should ideally be moved to your main.css */
+            body.custom-background {
+                background-image: none !important;
+                background-color: #0d0221; /* Dark background for coding theme */
+            }
+    
+            #particle-background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0; /* Behind other content but above body background */
+            }
+    
+            #wrapper {
+                position: relative; 
+                z-index: 1; /* Ensure wrapper is above the particle background */
+                background-color: transparent; /* Make wrapper transparent */
+            }
+    
+            /* Adjust header (sidebar) and main content area for readability over dynamic background */
+            #header {
+                background-color: rgba(13, 2, 33, 0.8); /* Semi-transparent dark background for sidebar */
+            }
+    
+            #main > .inner {
+                 /* Original template might have background: #fff; adjust as needed */
+                background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent for content area */
+                border-radius: 8px; /* Optional: rounded corners for content blocks */
+                padding: 2em; /* Ensure padding is sufficient */
+            }
+            
+            /* Style for the integrated navigation in the sidebar */
+            #header .inner nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 2em 0 0 0; /* Adjust margin as needed */
+            }
+            #header .inner nav ul li {
+                padding: 0.5em 0;
+            }
+            #header .inner nav ul li a {
+                display: block;
+                padding: 0.5em 1em; /* Adjust padding for better clickability */
+                color: #ffffff; /* White text for dark sidebar */
+                text-decoration: none;
+                border-bottom: none; /* Remove default underline from template */
+                font-weight: 500;
+            }
+            #header .inner nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body class="is-preload custom-background"> {/* Added custom-background class */}
+    
+        <div id="particle-background"></div> {/* Container for the dynamic background */}
+    
+        <!-- Wrapper -->
+        <div id="wrapper">
+    
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="index.html" class="logo">
+                        <span class="symbol"><img src="images/alp_avatar.jpg" alt="Alp Altug" /></span><span class="title">Alp Altug</span>
+                    </a>
+                    {/* Integrated navigation - replacing the old menu button */}
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
         <!-- Main -->
         <div id="main">
-            <div class="inner">
-                <header>
+            <div class="inner">                <header>
                     <h1>Alp Altug</h1>
                     <h2>Software Development Engineer | Innovator | UC Berkeley EECS (Hons) '24</h2>
-                    <p>Welcome to my personal website. I am a passionate software engineer with experience in AI/ML, cloud infrastructure, and web development, currently at Amazon. Here, you'll find insights into my professional journey, projects, and the experiences that drive my work. Explore further to learn more about my contributions and skills.</p>
                 </header>
                 <section>
-                    <p>My name is Alp Altug, and I am a dedicated software development engineer at Amazon, with a strong foundation from UC Berkeley (EECS, Honors Class of 2024). My career has been shaped by impactful experiences at renowned institutions like Lawrence Livermore National Laboratory and Nokia Bell Labs, as well as dynamic startups such as 11Sight and shuffl mobility Inc. I specialize in AI/ML, cloud solutions, and web development, always aiming to create scalable and user-focused applications.</p>
+                    <p>My name is Alp Altug, and I am a dedicated software development engineer working at Amazon. I have a Bachelor's degree from UC Berkeley (EECS, Honors Class of 2024). My career has been shaped by impactful experiences at renowned institutions like Lawrence Livermore National Laboratory and Nokia Bell Labs, as well as dynamic startups such as 11Sight and shuffl mobility Inc. I am passionate towards designing with a clien facing applications that are scalable, and well-engineered.</p>
                     <p>This website offers a glimpse into my professional background and key projects. To learn more, please visit the following sections:</p>
                     <ul>
                         <li><a href="about.html"><strong>About Me:</strong> Discover more about my journey, skills, and professional philosophy.</a></li>
